@@ -7,7 +7,7 @@ class Navbar extends Component {
                 <h1><a href="index.html">Hacking covid-19</a></h1>
                 <ul>
                     <li>Connexion</li>
-                    <li>Signup</li>
+                    <li>Sign Up</li>
                 </ul>
             </div>
         )

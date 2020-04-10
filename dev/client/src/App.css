@@ -1,1 +1,29 @@
 /* Fichier pour le thèmes de l'application */
+:root{
+  /* Variables CSS générals*/
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.navbar{
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 80px;
+  padding: 0 20px;
+  background: #090909;
+  color: #fff;
+}
+.navbar ul{
+  display: flex;
+  flex-direction: row;
+}
+.navbar ul li{
+  margin: auto;
+  list-style: none;
+}

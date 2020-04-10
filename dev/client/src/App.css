@@ -16,7 +16,7 @@ a{
   grid-template-columns: 4fr 2fr;
   grid-template-rows: 80px;
   padding: 0 20px;
-  background: #090909;
+  background: #3a1a6b;
   color: #fff;
 }
 .navbar ul{
@@ -26,4 +26,13 @@ a{
 .navbar ul li{
   margin: auto;
   list-style: none;
+}
+.landing{
+  height: calc(100vh - 80px);
+  background: linear-gradient(#2bc6e2, #5b2aa7);
+  align-items: center;
+  display: grid;
+}
+h2{
+  text-align: center;
 }

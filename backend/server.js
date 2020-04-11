@@ -48,6 +48,7 @@ const server = app.listen(port, function() {
 });
 
 // start scrapping for lives
+get_stream();
 setInterval(get_stream, 300000);
 
 export default server;

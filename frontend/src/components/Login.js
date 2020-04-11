@@ -28,6 +28,7 @@ const Login = () => {
             value={email}
             required={true}
             onChange={(e) => onChange(e)}
+            className='input'
           ></input>
         </Formgroup>
         <Formgroup>
@@ -38,6 +39,7 @@ const Login = () => {
             value={password}
             required={true}
             onChange={(e) => onChange(e)}
+            className='input'
           ></input>
         </Formgroup>
         <Validation>

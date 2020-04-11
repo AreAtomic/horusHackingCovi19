@@ -51,6 +51,7 @@ const Register = () => {
             value={name}
             required={true}
             onChange={(e) => onChange(e)}
+            className='input'
           ></input>
         </Formgroup>
         <Formgroup>
@@ -61,6 +62,7 @@ const Register = () => {
             value={email}
             required={true}
             onChange={(e) => onChange(e)}
+            className='input'
           ></input>
         </Formgroup>
         <Formgroup>
@@ -71,6 +73,7 @@ const Register = () => {
             value={password}
             required={true}
             onChange={(e) => onChange(e)}
+            className='input'
           ></input>
         </Formgroup>
         <Formgroup>
@@ -81,6 +84,7 @@ const Register = () => {
             value={password2}
             required={true}
             onChange={(e) => onChange(e)}
+            className='input'
           ></input>
         </Formgroup>
         <Validation>

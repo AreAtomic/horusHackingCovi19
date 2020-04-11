@@ -1,0 +1,19 @@
+/* Fichier pour le thèmes de l'application */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
+
+:root{
+  /* Variables CSS générals*/
+  --primary-color: #25283D;
+  --secondary-color: #F5D84B;
+  --white: #FEFEFD;
+}
+body{
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  background: var(--primary-color);
+  font-family: 'Baloo Paaji 2', cursive;
+}
+.App-header{
+  
+}

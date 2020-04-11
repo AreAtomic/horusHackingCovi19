@@ -8,7 +8,9 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Route exact path='/' component={Nav}></Route>
+        <Router>
+          <Route exact path='/' component={Nav}/>
+        </Router>
       </Fragment>
     );
   }

@@ -3,7 +3,7 @@
 
 :root{
   /* Variables CSS générals*/
-  --primary-color: #664CCC;
+  --primary-color: #000022;
   --primary-gradient-color: #6b7bf4;
   --secondary-color: #f28123;
   --tersary-color: #c42847;
@@ -12,6 +12,7 @@
 body{
   margin: 0;
   padding: 0;
+  color: var(--white);
   background: var(--primary-color);
   font-family: 'Baloo Paaji 2', cursive;
 }
@@ -44,7 +45,7 @@ a{
 }
 h2{
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--tersary-color);
   font-size: 45px;
 }
 input{
@@ -60,7 +61,7 @@ input{
   margin-top: 30%;
 }
 .submit{
-  background: var(--secondary-color);
+  background: var(--tersary-color);
   color: var(--white);
   margin: 10px;
   height: 50px;
@@ -78,4 +79,14 @@ input{
 }
 .sliderCount li{
   margin: auto;
+  font-size: 25px;
+}
+.sliderCount li.active{
+  background: var(--tersary-color);
+  padding: 0 16px;
+  border-radius: 50%;
+}
+.separator{
+  font-size: 30px;
+  font-family: cursive;
 }

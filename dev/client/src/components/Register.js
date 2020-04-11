@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -14,12 +15,28 @@ const Register = () => {
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
       console.log('Passwords do not match');
     } else {
-      console.log(formData);
+      const newUser = {
+          name,
+          email,
+          password
+      }
+      try{
+        const config = {
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        }
+        const body = JSON.stringify(newUser);
+        const res = await axios.post("/api/users", body, config);
+        console.log(res);
+      }catch(err){
+        console.log(err.response.data);
+      }
     }
   };
   return (
@@ -67,14 +84,16 @@ const Register = () => {
           ></input>
         </Formgroup>
         <Validation>
-            <a href='/retour' className="cancel">Retour</a>
+            <a href='/' className="cancel">Retour</a>
           <input type='submit' value="S'inscrire" className="submit"></input>
         </Validation>
       </form>
       <Slider>
           <ul className="sliderCount">
-              <li key={1}>1</li>
-              <li key={2} style={{listStyle: '-'}}>2</li>
+              <li key={1} className="active">1</li>
+              <span className="separator">-</span>
+              <li key={2}>2</li>
+              <span className="separator">-</span>
               <li key={3}>3</li>
           </ul>
       </Slider>
@@ -97,6 +116,6 @@ const Validation = styled.div({
 });
 const Slider = styled.div({
     display: "grid",
-    width:"50%",
+    width:"45%",
     margin: '50px auto 0',
 })

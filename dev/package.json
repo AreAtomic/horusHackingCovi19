@@ -4,7 +4,7 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "babel-node": "./node_modules/@babel/node/bin/babel-node.js server.js",
+        "babel-node": "node ./node_modules/@babel/node/bin/babel-node.js server.js",
         "dev": "nodemon -L --exec npm run babel-node",
         "test": "./node_modules/nodemon/bin/nodemon.js -L --ext js --watch ./ --exec './node_modules/.bin/mocha --compilers js:@babel/register' --delay 1",
         "dev:up": "docker-compose -f docker-compose.dev.yml down && docker-compose -f docker-compose.dev.yml build && docker-compose -f docker-compose.dev.yml up",
@@ -14,7 +14,7 @@
     "license": "ISC",
     "dependencies": {
         "@babel/runtime": "^7.2.0",
-        "bcrypt": "^3.0.3",
+        "bcrypt": "^3.0.8",
         "bcrypt-nodejs": "0.0.3",
         "body-parser": "^1.18.3",
         "cors": "^2.8.5",
@@ -22,7 +22,7 @@
         "jsonwebtoken": "^8.4.0",
         "mongoose": "^5.4.2",
         "morgan": "^1.9.1",
-        "nodemon": "^1.18.9"
+        "nodemon": "^1.19.4"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.3",

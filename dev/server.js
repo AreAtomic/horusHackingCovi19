@@ -1,18 +1,47 @@
-const express = require('express');
-const connectDB = require('./config/db');
-const path = require('path');
+import express from 'express'
+import cors from 'cors'
+import logger from 'morgan'
+import routers from './routes/index'
+import bodyParser from 'body-parser'
+import mongoose from './config/database' // database configuration
+import seeding from './config/seeding'
 
-const app = express();
+const isDevEnv = process.env.NODE_ENVIRONMENT === 'DEVELOPMENT'
 
-// Connect Database
-connectDB();
+/*
+* Setup server config
+! TODO : Handle 404 as an error.
+*/
+const app = express()
+const port = process.env.PORT || 5000
+app.set('secretKey', 'chatbotApplication2018@ISIS.4A') // jwt secret token
 
-// Init Middleware
-app.use(express.json());
+//* Parse application/x-www-form-urlencoded and application/json
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(cors())
 
-app.use('/api/users', require('./routes/user'));
-app.use('/api/auth', require('./routes/auth'));
+/*
+ * Connection to database
+ */
+mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'))
+if (isDevEnv) app.use(logger('dev'))
 
-const PORT = process.env.PORT || 3000;
+/*
+ * Load server routes
+ */
+app.get('/', function (req, res) {
+  res.json({ version: '1.0.0' })
+})
+app.get('/seed', function(req, res){
+  seeding();
+  res.json({msg: 'Done.'})
+})
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+routers.map(router => app.use('/api/v1', router))
+
+const server = app.listen(port, function () {
+  console.log('Node server listening on port ' + port)
+})
+
+export default server

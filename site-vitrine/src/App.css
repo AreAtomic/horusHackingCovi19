@@ -23,6 +23,18 @@ a{
   text-decoration: none;
 }
 .video {
-  display: flex;
-  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+.button{
+  background: var(--secondary-color);
+  text-align: center;
+  display: block;
+  width: 246px;
+  height: 60px;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 20px;line-height: 60px;
+  border-radius: 10px;
+  margin: 0 auto;
 }

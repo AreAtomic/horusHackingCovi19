@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Landing from './components/Landing';
+import Login from './components/Login';
+import Register from './components/Register';
 import './App.css';
 
 class App extends Component {
@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <Router>
         <div className='App'>
-          <Navbar />
-          <Route exact path='/' component={Landing}/>
+          <Login />
+          <Route exact path='/' component={Register}/>
         </div>
       </Router>
     );

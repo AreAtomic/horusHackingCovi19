@@ -86,16 +86,15 @@ h2 {
 #anim *,
 html,
 body {
-  overflow: hidden;
   font-family: "Roboto";
 }
 
 #logo .cls-1 {
-  color: #26273e;
+  color: #efefef;
   fill: currentColor;
 }
 #logo .cls-2 {
-  color: #27283e;
+  color: #efefef;
   fill: currentColor;
 }
 #logo .cls-3 {
@@ -167,9 +166,80 @@ body {
   border-radius: 0.1rem;
   background-color: #ffffff;
 }
+.button a {
+  color: #000000 !important;
+}
 
 #hero .button {
   margin-top: 50px;
   opacity: 0;
   animation: simpleAppear 1.2s 4.5s ease-out forwards;
+}
+
+.lives-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-live {
+  flex: 1 1 auto;
+  background-color: #f3f3f3;
+  border-radius: 3%;
+  margin: 20px;
+  max-width: 150px;
+  max-height: 150px;
+  color: #313131;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease;
+  transform: scale(1);
+}
+
+.card-live .logo img,
+.card-live .profile img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.card-live .logo {
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: solid 3px rgba(31, 31, 31, 0.5);
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pulse {
+  box-shadow: 0 0 0 0px rgba(31, 31, 31, 1);
+  animation: pulse 1s 0s infinite;
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 5px rgba(31, 31, 31, 0);
+  }
+}
+.card-live .banner {
+  height: 100px;
+  position: relative;
+  background-color: #25283d;
+}
+.card-live .banner img {
+  position: relative;
+  max-height: 100px;
+}
+.card-live .name,
+.card-live .game {
+  padding-left: 5px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.card-live:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }

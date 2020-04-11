@@ -3,11 +3,9 @@
 
 :root{
   /* Variables CSS générals*/
-  --primary-color: #000022;
-  --primary-gradient-color: #6b7bf4;
-  --secondary-color: #f28123;
-  --tersary-color: #c42847;
-  --white: #fefefd;
+  --primary-color: #25283D;
+  --secondary-color: #F5D84B;
+  --white: #FEFEFD;
 }
 body{
   margin: 0;
@@ -19,29 +17,6 @@ body{
 a{
   color: #f5f5f5;
   text-decoration: none;
-}
-
-.navbar{
-  display: grid;
-  grid-template-columns: 4fr 2fr;
-  grid-template-rows: 80px;
-  padding: 0 20px;
-  background: #3a1a6b;
-  color: #f5f5f5;
-}
-.navbar ul{
-  display: flex;
-  flex-direction: row;
-}
-.navbar ul li{
-  margin: auto;
-  list-style: none;
-}
-.landing{
-  height: calc(100vh - 80px);
-  background: linear-gradient(#2bc6e2, #5b2aa7);
-  align-items: center;
-  display: grid;
 }
 h2{
   text-align: center;
@@ -61,7 +36,7 @@ input{
   margin-top: 30%;
 }
 .submit{
-  background: var(--tersary-color);
+  background: var(--secondary-color);
   color: var(--white);
   margin: 10px;
   height: 50px;
@@ -82,7 +57,7 @@ input{
   font-size: 25px;
 }
 .sliderCount li.active{
-  background: var(--tersary-color);
+  background: var(--secondary-color);
   padding: 0 16px;
   border-radius: 50%;
 }

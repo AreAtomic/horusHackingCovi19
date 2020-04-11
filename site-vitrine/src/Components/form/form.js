@@ -6,11 +6,27 @@ class form extends Component {
   render() {
     return (
       <Fragment>
-        <Form action='/'>
-          <input type='text' placeholder='Nom' className="signupRows"></input>
-          <input type='text' placeholder='Prenom' className="signupRows"></input>
-          <input type='text' placeholder='Date de naissance' className="signupRows"></input>
-          <input type='email' placeholder='Email' className="signupRows"></input>
+        <Form action='/send'>
+          <input type='text' placeholder='Nom' className='signupRows'></input>
+          <input
+            type='text'
+            placeholder='Prenom'
+            className='signupRows'
+            required='true'
+          ></input>
+          <input
+            type='text'
+            placeholder='Date de naissance'
+            className='signupRows'
+            required='true'
+          ></input>
+          <input
+            type='email'
+            placeholder='Email'
+            className='signupRows'
+            required='true'
+          ></input>
+          <input type='submit' value='Inscrivez-vous' className='button' />
         </Form>
       </Fragment>
     );
@@ -20,6 +36,7 @@ class form extends Component {
 export default form;
 
 const Form = styled.form({
-  display: "grid",
-  width: '100%'
+  display: 'grid',
+  width: '100%',
+  marginBottom: '50px',
 });

@@ -36,6 +36,7 @@ export default Video;
 const Container = styled.div({
   display: 'grid',
   gridTemplateColumns: '1fr',
+  marginTop: '50px'
 });
 
 const Desc = styled.h3({

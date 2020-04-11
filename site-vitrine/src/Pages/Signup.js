@@ -13,7 +13,6 @@ class Signup extends Component {
                 <Nav/>
                 <Title/>
                 <Form/>
-                <SignUp/>
             </Fragment>
         );
     }

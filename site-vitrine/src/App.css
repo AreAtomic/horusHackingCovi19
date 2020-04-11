@@ -22,3 +22,7 @@ a{
   text-transform: uppercase;
   text-decoration: none;
 }
+.video {
+  display: flex;
+  justify-content: center;
+}

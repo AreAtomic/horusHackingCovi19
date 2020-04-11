@@ -3,8 +3,8 @@
 
 :root{
   /* Variables CSS générals*/
-  --primary-color: #25283D;
-  --secondary-color: #F5D84B;
+  --primary-color: #26273E;
+  --secondary-color: #F9D903;
   --white: #FEFEFD;
 }
 body{
@@ -16,6 +16,12 @@ body{
 }
 .App-logo{
   width: 200px;
+}
+.App-logo-Centre{
+  width: 444px;
+  height: 220px;
+  left: 708px;
+  top: 89px;
 }
 a{
   color: var(--secondary-color);
@@ -36,5 +42,15 @@ a{
   font-weight: bold;
   font-size: 20px;line-height: 60px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 10px auto;
+}
+.signupRows{
+  color: gray;
+  background: var(--white);
+  width: 325px;
+  height: 42px;
+  border-radius: 17px;
+  padding-left: 15px;
+  margin: 20px auto;
+  border: none;
 }

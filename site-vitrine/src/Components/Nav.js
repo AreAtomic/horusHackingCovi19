@@ -11,7 +11,7 @@ class Nav extends Component {
         <img src={logo} className='App-logo' alt='logo'/>
         <Links>
           <Link to='/info' style={{margin: '0 auto'}}>Plus d'infos</Link>
-          <Link to='/contact' style={{margin: '0 auto'}}>Plus d'infos</Link>
+          <Link to='/contact' style={{margin: '0 auto'}}>Nous contacter</Link>
         </Links>
       </Header>
     );

@@ -1,6 +1,7 @@
 import express from 'express'
 import { create, authenticate, update, show, logout } from '../app/controllers/usersController'
 import { dispatch } from '../app/controllers/Controller'
+import { passportConfig } from '../app/controllers/fbUserControllers.js'
 
 const router = express.Router()
 
@@ -41,5 +42,9 @@ router.get('/users/me', dispatch(show))
 ! TODO Create logout method
 */
 router.get('/users/logout', dispatch(logout))
+
+
+
+router.get()
 
 export default router

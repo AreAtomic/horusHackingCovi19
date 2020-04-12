@@ -5,7 +5,7 @@ class Logo extends Component {
     return (
       <div className="explorer-wrapper">
         <svg
-          class="explorer"
+          className="explorer"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           width="1184.11"
@@ -209,8 +209,8 @@ class Logo extends Component {
             transform="translate(-7.95 -78.25)"
             fill="none"
             stroke="#3f3d56"
-            stroke-miterlimit="10"
-            stroke-width="4"
+            strokeMiterlimit="10"
+            strokeWidth="4"
           />
           <path
             d="M153.75,672.89a14,14,0,0,0-7-11.5l-3.14,6.22.1-7.53a14.22,14.22,0,0,0-4.63-.56,14,14,0,1,0,14.68,13.37Z"
@@ -267,8 +267,8 @@ class Logo extends Component {
             transform="translate(-7.95 -78.25)"
             fill="none"
             stroke="#3f3d56"
-            stroke-miterlimit="10"
-            stroke-width="4"
+            strokeMiterlimit="10"
+            strokeWidth="4"
           />
           <path
             d="M1109.81,564.23a24.93,24.93,0,0,0-12.46-20.46l-5.59,11.06.17-13.39a25,25,0,1,0,17.88,22.79Z"

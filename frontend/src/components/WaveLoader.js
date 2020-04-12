@@ -11,9 +11,9 @@ class WaveLoader extends React.Component {
 
   render() {
     return (
-      <div class={"wave-wrapper " + this.props.className}>
-        <div class="wave-container">
-          <div class="wave-loader"></div>
+      <div className={"wave-wrapper " + this.props.className}>
+        <div className="wave-container">
+          <div className="wave-loader"></div>
         </div>
       </div>
     );

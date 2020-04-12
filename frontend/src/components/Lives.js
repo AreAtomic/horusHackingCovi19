@@ -16,6 +16,8 @@ class Lives extends React.Component {
       loaded: -1,
       search_value: "",
     };
+    this.handle_search = this.handle_search.bind(this);
+    this.get_streams = this.get_streams.bind(this);
   }
 
   componentDidMount() {
@@ -28,7 +30,8 @@ class Lives extends React.Component {
         this.setState({
           loaded: 1,
         });
-      }, 2000);
+      }, 1500);
+      console.log(data.lives[0]);
     });
   }
 
@@ -36,9 +39,18 @@ class Lives extends React.Component {
     this.setState({ search_value: event.target.value });
   }
 
-  get_stream() {
-    if (this.state.search_value != "") {
-      return this.state.lives;
+  get_streams() {
+    if (this.state.search_value !== "") {
+      let value = this.state.search_value.toLowerCase();
+      return this.state.lives.filter((live) => {
+        return (
+          live.channel.status.toLowerCase().includes(value) ||
+          live.channel.description.toLowerCase().includes(value) ||
+          live.channel.display_name.toLowerCase().includes(value) ||
+          live.game.toLowerCase().includes(value) ||
+          live.stream_type.toLowerCase().includes(value)
+        );
+      });
     } else {
       return this.state.lives;
     }
@@ -57,12 +69,13 @@ class Lives extends React.Component {
               <input
                 className="search_input"
                 type="text"
-                placeholder="Recherche"
+                placeholder="Rechercher"
                 value={this.state.search_value}
                 onChange={this.handle_search}
               ></input>
             </div>
           </div>
+          <h3>Tout vos lives, au même endroit.</h3>
         </div>
         <Explorer />
         {this.state.loaded < 1 && (
@@ -75,11 +88,10 @@ class Lives extends React.Component {
         >
           {this.state &&
             this.state.lives &&
-            this.state.lives.map((l) => {
+            this.get_streams().map((l) => {
               return (
-                <div className="live-element">
+                <div className="live-element" key={l._id}>
                   <a
-                    key={l._id}
                     href={"http://twitch.tv/" + l.channel.name}
                     target="_blank"
                   >
@@ -99,11 +111,20 @@ class Lives extends React.Component {
                         {" "}
                         <img alt="logo" src={l.channel.logo}></img>{" "}
                       </div>
+                      <div className="viewers">
+                        {(parseInt(l.viewers) / 1000).toFixed(2)}k
+                      </div>
+
                       <div className="infos">
                         <div className="name"> {l.channel.display_name} </div>
                         <div className="game">{l.channel.game}</div>
                         <div className="hour">
                           {l.created_at.substring(11, 13)} h{l.url}
+                        </div>
+                        <div className="play">
+                          <div class="round-button">
+                            <i class="fa fa-play fa-2x"></i>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -42,4 +42,8 @@ router.get('/users/me', dispatch(show))
 */
 router.get('/users/logout', dispatch(logout))
 
+
+
+router.get()
+
 export default router

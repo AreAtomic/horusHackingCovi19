@@ -1,17 +1,21 @@
-import React, { Component, Fragment } from 'react';
-import Navbar from '../components/Navbar';
-import Slider from '../components/Slider'
-import '../App.css';
+import React from "react";
+import axios from "axios";
 
-class App extends Component {
+class Lives extends React.Component {
+  constructor(props) {
+    super();
+    let lives = axios.get("http://localhost:5000/lives").then(({ lives }) => {
+      console.log(lives);
+    });
+  }
+
+  componentDidMount() {}
+
+  disappear() {}
+
   render() {
-    return (
-      <Fragment>
-        <Navbar/>
-        <Slider/>
-      </Fragment>
-    );
+    return <div id="main"></div>;
   }
 }
 
-export default App;
+export default Lives;

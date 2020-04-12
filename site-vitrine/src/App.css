@@ -55,3 +55,8 @@ a{
   margin: 20px auto;
   border: none;
 }
+
+.formulaireInscription{
+  display: grid;
+  width: 100%;
+}

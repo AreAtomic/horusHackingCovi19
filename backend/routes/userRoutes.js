@@ -1,7 +1,6 @@
 import express from 'express'
 import { create, authenticate, update, show, logout } from '../app/controllers/usersController'
 import { dispatch } from '../app/controllers/Controller'
-import { passportConfig } from '../app/controllers/fbUserControllers.js'
 
 const router = express.Router()
 

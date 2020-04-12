@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import Title from '../Components/form/title';
 import Form from '../Components/form/form'
@@ -13,6 +14,7 @@ class Signup extends Component {
                 <Nav/>
                 <Title/>
                 <Form/>
+                <Link to='/send' className="retour">Retour</Link>
             </Fragment>
         );
     }

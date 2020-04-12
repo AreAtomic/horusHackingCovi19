@@ -51,19 +51,4 @@ const server = app.listen(port, function() {
 get_stream();
 setInterval(get_stream, 300000);
 
-/* Priority serve any static files */
-app.use(express.static(path.resolve(__dirname, "../react-ui/build")));
-
-app.get("/api/send_email", function(req, res) {
-  res.set("Content-Type", "application/json");
-
-  /* Send email here */
-
-  res.send('{"message":"Email sent."}');
-});
-
-app.get("*", function(request, response) {
-  response.sendFile(path.resolve(__dirname, "../react-ui/build", "index.html"));
-});
-
 export default server;

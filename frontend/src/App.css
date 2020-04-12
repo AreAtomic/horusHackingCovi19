@@ -77,7 +77,18 @@ h2 {
   padding: 5px;
   margin: 15px auto 0 0;
 }
-
+.filtrer{
+  display: grid;
+  position: absolute;
+  background: #25283d;
+  font-size: 15px;
+  z-index: 9;
+  width: 100%;
+}
+.name-filtre{
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+}
 #anim canvas {
   height: 100vh;
   width: 100vw;
@@ -183,11 +194,14 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
+#main h2{
+  color: var(--secondary-color);
+}
 .card-live {
   flex: 1 1 auto;
   background-color: #f3f3f3;
   border-radius: 3%;
-  margin: 20px;
+  margin: 20px auto;
   max-width: 150px;
   max-height: 150px;
   color: #313131;
@@ -225,6 +239,21 @@ body {
     box-shadow: 0 0 0 5px rgba(31, 31, 31, 0);
   }
 }
+
+.card-live .day{
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card-live .hour{
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
 .card-live .banner {
   height: 100px;
   position: relative;
@@ -244,4 +273,19 @@ body {
 .card-live:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+@media screen and (min-width: 700px){
+  .card-live {
+    flex: 1 1 auto;
+    background-color: #f3f3f3;
+    border-radius: 3%;
+    margin: 20px 30px;
+    max-width: 150px;
+    max-height: 150px;
+    color: #313131;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s ease;
+    transform: scale(1);
+  }
 }

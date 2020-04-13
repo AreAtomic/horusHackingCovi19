@@ -8,9 +8,8 @@ class form extends Component {
         return (
             <Fragment>
                 <Top>
-                    <img src={logo} alt="OMIZ Logo" style={{ width: '222px', height: '110px', margin: '50px auto 0'}} />
-                    <Title>Tous vos lives au même endroit</Title>
-                </Top>
+                    <img src={logo} alt="OMIZ Logo" style={{ width: '222px', height: '110px', margin:'auto'}} />
+                 </Top>
             </Fragment>
         );
     }
@@ -23,9 +22,3 @@ const Top = styled.form({
     width: '100%'
 });
 
-const Title = styled.h3({
-    color: '#F5D84B',
-    textTransform: 'uppercase',
-    fontSize: '28px',
-    margin: '10px auto 50px',
-});

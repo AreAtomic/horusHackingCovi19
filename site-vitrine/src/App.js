@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import logo from './logo.png';
+import Info from './Pages/Info';
 import Accueil from './Pages/Accueil';
 import Signup from './Pages/Signup';
 import Thanks from './Pages/Send';
@@ -16,6 +17,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Accueil} />
               <Route path='/signup' component={Signup} />
+              <Route path='/info' component={Info}/>
               <Route path='/send' component={Thanks} />
               <Route path='/contact' component={Contact} />
             </Switch>

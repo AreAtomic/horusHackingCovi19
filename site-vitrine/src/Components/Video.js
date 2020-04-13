@@ -5,6 +5,9 @@ import logo from '../logo.png';
 import '../App.css';
 
 class Video extends Component {
+  constructor(props){
+    super()
+  }
   render() {
     const opts = {
       height: '390',
@@ -16,15 +19,8 @@ class Video extends Component {
     };
     return (
       <Container>
-        <div className='video'>
-          <YouTube videoId='g8KhFxLfZiM' opts={opts} onReady={this._onReady} />
-          <img
-            src={logo}
-            className='App-logo'
-            alt='logo'
-            style={{ margin: '0 auto' }}
-          />
-          <Desc>Tout vos lives au même endroit</Desc>
+        <div>
+          <YouTube videoId={this.props.videoId} opts={opts} onReady={this._onReady} />
         </div>
       </Container>
     );
@@ -36,12 +32,7 @@ export default Video;
 const Container = styled.div({
   display: 'grid',
   gridTemplateColumns: '1fr',
-  marginTop: '50px'
+  marginTop: '12px'
 });
 
-const Desc = styled.h3({
-  color: '#F5D84B',
-  textTransform: 'uppercase',
-  fontSize: '28px',
-  marginTop: 0
-});
+

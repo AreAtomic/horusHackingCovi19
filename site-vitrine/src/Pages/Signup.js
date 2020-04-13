@@ -14,7 +14,7 @@ class Signup extends Component {
                 <Nav/>
                 <Title/>
                 <Form/>
-                <Link to='/send' className="retour">Retour</Link>
+                <Link to='/' className="retour">Retour</Link>
             </Fragment>
         );
     }
